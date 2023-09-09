@@ -1,12 +1,14 @@
 import React, { useState } from 'react'
-
+import { useDispatch } from 'react-redux';
+import { addNewTodo } from '../../Redux/Actions/api';
 function Search() {
-  const[textTask, setTextTask] = useState();
- 
-  const onSubmitTask = () =>{
-
+  const [textTask, setTextTask] = useState();
+  const dispatch = useDispatch();
+  const onSubmitTask = (e) => {
+    e.preventDefault();
+    dispatch(addNewTodo(textTask));
   }
-  const onInputChange = (e) =>{
+  const onInputChange = (e) => {
     setTextTask(e.target.value);
   }
   return (
