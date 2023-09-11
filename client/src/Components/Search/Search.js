@@ -7,6 +7,7 @@ function Search() {
   const onSubmitTask = (e) => {
     e.preventDefault();
     dispatch(addNewTodo(textTask));
+    setTextTask('');
   }
   const onInputChange = (e) => {
     setTextTask(e.target.value);
@@ -19,6 +20,7 @@ function Search() {
           placeholder='Enter your new task...'
           type='text'
           onChange={onInputChange}
+          value={textTask}
         />
       </form>
     </>
