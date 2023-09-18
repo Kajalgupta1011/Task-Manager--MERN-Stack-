@@ -101,3 +101,15 @@ h2 {
   align-items: flex-end;
   gap: 5px;
 }
+
+/* media query css------------------------------------------------------------------ */
+@media(min-width: 421px) and (max-width: 767px){
+  .task-container ul{
+  grid-template-columns: repeat(2, 1fr) !important;
+}
+}
+@media (max-width: 420px){
+  .task-container ul{
+  grid-template-columns: repeat(1, 1fr) !important;
+}
+}
