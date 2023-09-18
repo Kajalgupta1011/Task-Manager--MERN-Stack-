@@ -5,7 +5,11 @@ export const todosReducers = (state = [], action) => {
         case actionTypes.ADD_NEW_TODO:
             
             return[action.payload, ...state];
-    
+            
+        case actionTypes.GET_ALL_TODO:
+            
+            return action.payload;
+
         default:
             return state;
     }

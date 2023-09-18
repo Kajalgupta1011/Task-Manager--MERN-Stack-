@@ -15,3 +15,12 @@ export const AddTodoControl = async (req, res) => {
         return res.status(500).json(error.message);
     }
 }
+
+export const GetAllTodoControl = async (req, res) => {
+    try{
+        const allTodos = await todo.find( {} ).sort( {'timestamp' : -1} )
+        return res.status(200).json(allTodos);
+    }catch(error){
+        return res.status(500).json(error.message);
+    }
+}

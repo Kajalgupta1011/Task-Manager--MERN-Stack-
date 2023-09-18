@@ -2,9 +2,7 @@
 import {Connection} from './databse/db.js';
 import express from 'express';
 import cors from 'cors';
-// const express = require('express');
 import Routes from './Routes/route.js';
-import bodyParser from 'body-parser';
 
 const app = express();
 app.use(cors())
