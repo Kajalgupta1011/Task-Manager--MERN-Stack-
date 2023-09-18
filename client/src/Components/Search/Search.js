@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import './Search.css';
 import { useDispatch } from 'react-redux';
 import { addNewTodo } from '../../Redux/Actions/api';
 function Search() {
@@ -14,9 +15,9 @@ function Search() {
   }
   return (
     <>
-      <form className='input-form' onSubmit={onSubmitTask}>
+      <form className='task_form center-txt' onSubmit={onSubmitTask}>
         <input
-          className='input-task'
+          className='input_task'
           placeholder='Enter your new task...'
           type='text'
           onChange={onInputChange}

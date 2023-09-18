@@ -2,9 +2,11 @@ import React from 'react';
 import './Header.css';
 function Header() {
   return (
-    <div>
+    <>
+    <h1 className='main-heading center-txt reset-margin'>
       Task Manager
-    </div>
+    </h1>
+    </>
   )
 }
 
