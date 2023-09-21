@@ -1,5 +1,7 @@
 import React from 'react';
 import DeleteImage from '../../Assets/delete-without-bg.png'
+import taskList from '../../Assets/task-list.png'
+import list from '../../Assets/write.png'
 
 
 
@@ -8,13 +10,15 @@ function FilterComponent() {
         <div className='filter_sidebar'>
             <ul>
                 <li>
+                    <img src={list} />
                     <span>Active Tasks</span>
-                    <img src={DeleteImage} />
                 </li>
                 <li>
+                    <img src={taskList} />
                     <span>Completed Tasks</span>
                 </li>
                 <li>
+                    <img src={DeleteImage} />
                     <span>Deleted Tasks</span>
                 </li>
             </ul>

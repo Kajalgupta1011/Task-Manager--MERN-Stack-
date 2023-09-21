@@ -145,22 +145,22 @@ input.input_task:focus {
 
 .task-container {
   width: 80%;
-  /* margin-left: auto; */
+  margin-left: auto;
 }
 .task-container, .filter_sidebar{
   padding: 30px 20px;
 }
 .filter_sidebar {
   background-color: var(--white);
-  /* position: fixed; */
-  /* height: 100%; */
+  position: fixed;
+  height: 100%;
   width: 20%;
 }
 .filter_sidebar ul li {
  padding-bottom: 20px;
 }
 .main-section{
-  height: calc(100vh - 207px);
+  /* height: calc(100vh - 207px); */
   display: flex;
 }
 .empty-container{
@@ -180,6 +180,11 @@ input.input_task:focus {
 }
 .filter_sidebar ul li img{
   max-width: 40px;
+}
+.filter_sidebar ul li{
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 /* media query css------------------------------------------------------------------ */
 @media (min-width: 421px) and (max-width: 767px) {
