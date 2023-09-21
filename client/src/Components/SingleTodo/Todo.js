@@ -28,6 +28,9 @@ function Todo({ task }) {
         setEditing(!editing);
         dispatch(updateTask(task._id, text));
     }
+    const handleDelete = (e) => {
+        dispatch(deleteTask(task._id));
+    }
     return (
         <li className = {`task_item ${done ? 'done_todo' : ''}`} >
             <span className={`${editing ? 'hide_data' : ''}`}>{task.data}</span>
@@ -42,7 +45,7 @@ function Todo({ task }) {
             <span className='task_icons'>
                 {done ? <RemoveDoneIcon onClick={handleDoneTodo}/> : <DoneAllIcon onClick={handleDoneTodo}/>}
                 {editing ? <DoneIcon onClick={handleEditSubmit} />: <EditIcon onClick={handleEditing} />}
-                <DeleteOutlineIcon onClick={()=> dispatch(deleteTask(task._id))}/>
+                <DeleteOutlineIcon onClick={handleDelete}/>
             </span>
         </li>
     )

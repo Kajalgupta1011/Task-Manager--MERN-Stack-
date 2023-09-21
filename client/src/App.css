@@ -140,15 +140,15 @@ input.input_task:focus {
 /* Filter css------------------------------------------------------------------ */
 
 .task-container {
-  max-width: 80%;
-  margin-left: auto;
+  width: 80%;
+  /* margin-left: auto; */
 }
 .task-container, .filter_sidebar{
   padding: 30px 20px;
 }
 .filter_sidebar {
   background-color: var(--white);
-  position: fixed;
+  /* position: fixed; */
   height: 100%;
   width: 20%;
 }
@@ -158,6 +158,14 @@ input.input_task:focus {
 .main-section{
   display: flex;
 }
+.empty-container{
+  text-align: center;
+}
+.empty-container img{
+  max-width: 42%;
+}
+
+
 /* media query css------------------------------------------------------------------ */
 @media (min-width: 421px) and (max-width: 767px) {
   .task-container ul {
