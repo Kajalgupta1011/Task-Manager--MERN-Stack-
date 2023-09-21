@@ -1,3 +1,8 @@
+:root{
+  --dark-blue: #053B50;
+  --bg-color: aliceblue;
+  --white: #fff;
+}
 * {
   box-sizing: border-box;
 }
@@ -15,6 +20,7 @@ h1 {
   font-weight: 700;
   font-size: 55px;
   line-height: 72px;
+  color: var(--white);
 }
 h2 {
   text-transform: capitalize;
@@ -30,14 +36,15 @@ h2 {
 .container {
   margin: 0 auto;
   max-width: 1220px;
-  background-color: rgb(230, 230, 230);
+  background-color: var(--bg-color);
 }
 .header_fix_section {
   position: sticky;
-  background: rgb(189, 189, 189);
+  background-color: var(--dark-blue);
   top: 0;
   border-radius: 0 0 20px 20px;
   padding: 30px 20px;
+  z-index: 1;
 }
 /* glocal class css ------------------------------------------------------------------*/
 .center-txt {
@@ -81,6 +88,7 @@ h2 {
   font-size: 20px;
   line-height: 24px;
   padding: 0px 10px 10px 10px;
+  color: var(--white);
 }
 .task_form {
   max-width: 800px;
@@ -89,17 +97,25 @@ h2 {
 /* task lists css start ------------------------------------------------------------------*/
 
 .task_item {
-  background: aliceblue;
+  background: var(--white);
   padding: 20px;
   border-radius: 15px;
   display: flex;
   justify-content: space-between;
   min-height: 150px;
+  box-shadow: 14px 24px 72px 0px rgba(102, 102, 102, 0.1);
 }
 .task_icons {
   display: flex;
   align-items: flex-end;
   gap: 5px;
+}
+
+/* Done todo css start------------------------------------------------------------------ */
+.done_todo{
+  text-decoration: line-through;
+  opacity: 0.5;
+  /* background-color: var(--grey); */
 }
 
 /* media query css------------------------------------------------------------------ */

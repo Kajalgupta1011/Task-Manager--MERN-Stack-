@@ -12,8 +12,8 @@ export const todosReducers = (state = [], action) => {
 
         case actionTypes.TODO_TOGGLE:
             return state.map(task => (
-                task._id === action.payload._id ? {...task, done: !task.done} : task
-            )) 
+                task._id === action.payload._id ? {...task, status: !task.status} : task
+            )) ;
 
         default:
             return state;

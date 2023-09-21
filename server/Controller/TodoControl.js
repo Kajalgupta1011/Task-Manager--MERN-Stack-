@@ -31,7 +31,7 @@ export const DoneTodoToggle = async (req, res) => {
         const todoReference = await todo.findById(req.params.id);
         const updateTodo = await todo.findOneAndUpdate(
             { _id: req.params.id },
-            { done: !todoReference.done }
+            { status: !todoReference.status }
         )
         await updateTodo.save();
         return res.status(200).json(updateTodo);
@@ -40,3 +40,4 @@ export const DoneTodoToggle = async (req, res) => {
     }
 }
 
+  
