@@ -1,10 +1,11 @@
-:root{
-  --dark-blue: #053B50;
+:root {
+  --dark-blue: #053b50;
   --bg-color: aliceblue;
   --white: #fff;
 }
 * {
   box-sizing: border-box;
+  
 }
 body {
   margin: 0;
@@ -78,6 +79,12 @@ h2 {
 }
 
 /* task form css start ------------------------------------------------------------------*/
+input.input_task:focus {
+  color: black;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: inset 0 8px 13px -1px grey;
+}
 
 .input_task {
   width: 100%;
@@ -85,9 +92,9 @@ h2 {
   background: none;
   border: none;
   border-bottom: 1px solid;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 24px;
-  padding: 0px 10px 10px 10px;
+  padding: 10px 5px 10px 20px;
   color: var(--white);
 }
 .task_form {
@@ -101,31 +108,41 @@ h2 {
   padding: 20px;
   border-radius: 15px;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   min-height: 150px;
-  box-shadow: 14px 24px 72px 0px rgba(102, 102, 102, 0.1);
-}
-.task_icons {
-  display: flex;
-  align-items: flex-end;
-  gap: 5px;
+  /* box-shadow: 14px 24px 72px 0px rgba(102, 102, 102, 0.1); */
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+    rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  border-top: 5px solid;
 }
 
+
 /* Done todo css start------------------------------------------------------------------ */
-.done_todo{
+.done_todo {
   text-decoration: line-through;
   opacity: 0.5;
   /* background-color: var(--grey); */
 }
-
+.hide_data{
+  display: none;
+}
+/* task edit css ------------------------------------------------------------------ */
+.task_icons {
+  margin-top: auto;
+  align-self: flex-end;
+}
+.task_icons svg {
+  font-size: 24px;
+}
 /* media query css------------------------------------------------------------------ */
-@media(min-width: 421px) and (max-width: 767px){
-  .task-container ul{
-  grid-template-columns: repeat(2, 1fr) !important;
+@media (min-width: 421px) and (max-width: 767px) {
+  .task-container ul {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
 }
-}
-@media (max-width: 420px){
-  .task-container ul{
-  grid-template-columns: repeat(1, 1fr) !important;
-}
+@media (max-width: 420px) {
+  .task-container ul {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
 }

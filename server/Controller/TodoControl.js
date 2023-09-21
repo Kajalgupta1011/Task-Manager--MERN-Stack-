@@ -40,4 +40,18 @@ export const DoneTodoToggle = async (req, res) => {
     }
 }
 
-  
+export const updateTodoControl = async (req, res) => {
+    try {
+        
+        await todo.findOneAndUpdate(
+            { _id: req.params.id },
+            { data: req.body.data }
+        )
+        const updatedTodo = await todo.findById(req.params.id);
+        
+        return res.status(200).json(updatedTodo);
+    } catch (error) {
+        return res.status(500).json(error.message);
+    }
+}
+
