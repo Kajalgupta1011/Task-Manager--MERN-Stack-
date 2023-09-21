@@ -7,8 +7,15 @@ function Search() {
   const dispatch = useDispatch();
   const onSubmitTask = (e) => {
     e.preventDefault();
-    dispatch(addNewTodo(textTask));
-    setTextTask('');
+
+    if(textTask === ''){
+      alert("Input Cant'be Empty !!!");
+      
+    }else{
+      dispatch(addNewTodo(textTask));
+      setTextTask('');
+    }
+    
   }
   const onInputChange = (e) => {
     setTextTask(e.target.value);
