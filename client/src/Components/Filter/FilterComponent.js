@@ -1,4 +1,7 @@
-import React from 'react'
+import React from 'react';
+import DeleteImage from '../../Assets/delete-without-bg.png'
+
+
 
 function FilterComponent() {
     return (
@@ -6,6 +9,7 @@ function FilterComponent() {
             <ul>
                 <li>
                     <span>Active Tasks</span>
+                    <img src={DeleteImage} />
                 </li>
                 <li>
                     <span>Completed Tasks</span>
