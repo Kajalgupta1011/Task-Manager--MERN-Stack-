@@ -9,6 +9,7 @@ import Todo from '../SingleTodo/Todo';
 function Task() {
   const dispatch = useDispatch();
   const storedTodos = useSelector(state => state.todos);
+  const getCurrentTodo = useSelector(state => state.selected)
 
   useEffect(() => {
     dispatch(getAllTodo()); // Use getAllTodo as a function

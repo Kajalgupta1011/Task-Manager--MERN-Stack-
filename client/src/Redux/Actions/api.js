@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { ADD_NEW_TODO, GET_ALL_TODO, TODO_TOGGLE, UPDATE_TODO, DELETE_TODO } from './type';
+import { ADD_NEW_TODO, GET_ALL_TODO, TODO_TOGGLE, UPDATE_TODO, DELETE_TODO, FILTER_TOGGLE } from './type';
 
 
 const API_URL = 'http://localhost:8000';
@@ -46,4 +46,8 @@ export const deleteTask = (id) => async (dispatch) => {
     } catch (error) {
         console.log('Error while calling delete todos', error.message);
     }
+}
+
+export const filterToggle = (filter) => async (dispatch) => {
+  dispatch({type: FILTER_TOGGLE, selected: filter});
 }

@@ -12,7 +12,7 @@ function Todo({ task }) {
     const [done, setDone] = useState(false);
     const [editing, setEditing] = useState(false);
     const [text, setText] = useState(task.data);
-    
+
     const dispatch = useDispatch();
 
     const handleDoneTodo = () => {
@@ -32,20 +32,20 @@ function Todo({ task }) {
         dispatch(deleteTask(task._id));
     }
     return (
-        <li className = {`task_item ${done ? 'done_todo' : ''}`} >
+        <li className={`task_item ${done ? 'done_todo' : ''}`} >
             <span className={`${editing ? 'hide_data' : ''}`}>{task.data}</span>
 
             {editing ? (<form onSubmit={handleEditSubmit}>
                 <input
-                className='edit_input'
+                    className='edit_input'
                     type='text'
-                    value={text} 
-                    onChange={(e)=>setText(e.target.value)}/>
+                    value={text}
+                    onChange={(e) => setText(e.target.value)} />
             </form>) : ('')}
             <span className='task_icons'>
-                {done ? <RemoveDoneIcon onClick={handleDoneTodo}/> : <DoneAllIcon onClick={handleDoneTodo}/>}
-                {editing ? <DoneIcon onClick={handleEditSubmit} />: <EditIcon onClick={handleEditing} />}
-                <DeleteOutlineIcon onClick={handleDelete}/>
+                {done ? <RemoveDoneIcon onClick={handleDoneTodo} /> : <DoneAllIcon onClick={handleDoneTodo} />}
+                {editing ? <DoneIcon onClick={handleEditSubmit} /> : <EditIcon onClick={handleEditing} />}
+                <DeleteOutlineIcon onClick={handleDelete} />
             </span>
         </li>
     )
