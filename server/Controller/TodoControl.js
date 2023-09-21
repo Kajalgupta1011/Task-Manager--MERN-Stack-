@@ -54,4 +54,14 @@ export const updateTodoControl = async (req, res) => {
         return res.status(500).json(error.message);
     }
 }
+export const deleteTodoControl = async (req, res) => {
+    try {
+        
+        const updatedTodo = await todo.findByIdAndDelete(req.params.id)
+
+        return res.status(200).json(updatedTodo);
+    } catch (error) {
+        return res.status(500).json(error.message);
+    }
+}
 

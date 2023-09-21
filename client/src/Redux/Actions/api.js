@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { ADD_NEW_TODO, GET_ALL_TODO, TODO_TOGGLE, UPDATE_TODO } from './type';
+import { ADD_NEW_TODO, GET_ALL_TODO, TODO_TOGGLE, UPDATE_TODO, DELETE_TODO } from './type';
 
 
 const API_URL = 'http://localhost:8000';
@@ -9,7 +9,7 @@ export const addNewTodo = (data) => async (dispatch) => {
         const res = await axios.post(`${API_URL}/todos`, { data });
         dispatch({ type: ADD_NEW_TODO, payload: res.data })
     } catch (error) {
-        console.log('Error while calling api', error.message);
+        console.log('Error while calling api add todo', error.message);
     }
 }
 
@@ -26,7 +26,7 @@ export const todoToggle = (id) => async (dispatch) => {
         const res = await axios.get(`${API_URL}/todos/${id}`);
         dispatch({ type: TODO_TOGGLE, payload: res.data })
     } catch (error) {
-        console.log('Error while calling get all todos', error.message);
+        console.log('Error while calling editing todos', error.message);
     }
 }
 export const updateTask = (id, data) => async (dispatch) => {
@@ -34,6 +34,16 @@ export const updateTask = (id, data) => async (dispatch) => {
         const res = await axios.put(`${API_URL}/todos/${id}`, {data});        
         dispatch({ type: UPDATE_TODO, payload: res.data })
     } catch (error) {
-        console.log('Error while calling get all todos', error.message);
+        console.log('Error while calling update todos', error.message);
+    }
+}
+
+export const deleteTask = (id) => async (dispatch) => {
+    try {
+        const res = await axios.delete(`${API_URL}/todos/${id}`);    
+
+        dispatch({ type: DELETE_TODO, payload: res.data })
+    } catch (error) {
+        console.log('Error while calling delete todos', error.message);
     }
 }

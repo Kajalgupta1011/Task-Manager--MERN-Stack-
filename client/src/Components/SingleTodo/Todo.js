@@ -5,7 +5,7 @@ import EditIcon from '@mui/icons-material/Edit';
 import RemoveDoneIcon from '@mui/icons-material/RemoveDone';
 import DoneAllIcon from '@mui/icons-material/DoneAll';
 import DoneIcon from '@mui/icons-material/Done';
-import { todoToggle, updateTask } from '../../Redux/Actions/api';
+import { deleteTask, todoToggle, updateTask } from '../../Redux/Actions/api';
 import { useDispatch } from 'react-redux';
 
 function Todo({ task }) {
@@ -42,7 +42,7 @@ function Todo({ task }) {
             <span className='task_icons'>
                 {done ? <RemoveDoneIcon onClick={handleDoneTodo}/> : <DoneAllIcon onClick={handleDoneTodo}/>}
                 {editing ? <DoneIcon onClick={handleEditSubmit} />: <EditIcon onClick={handleEditing} />}
-                <DeleteOutlineIcon />
+                <DeleteOutlineIcon onClick={()=> dispatch(deleteTask(task._id))}/>
             </span>
         </li>
     )

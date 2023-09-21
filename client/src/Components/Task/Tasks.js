@@ -14,9 +14,8 @@ function Task() {
 
   return (
     <>
-      
       <div className='task-container'>
-      <h2 className='center-txt reset-txt main-heading'>Tasks</h2>
+      {/* <h2 className='center-txt reset-txt main-heading'>Tasks</h2> */}
         <ul>
           {
             storedTodos.map((task) => {
