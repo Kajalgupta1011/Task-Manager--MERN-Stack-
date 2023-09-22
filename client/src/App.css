@@ -5,7 +5,6 @@
 }
 * {
   box-sizing: border-box;
-  
 }
 body {
   background-color: var(--bg-color);
@@ -142,11 +141,6 @@ input.input_task:focus {
   font-size: 24px;
 }
 /* Filter css------------------------------------------------------------------ */
-
-.task-container {
-  /* width: 80%;
-  margin-left: auto; */
-}
 .task-container, .filter_sidebar{
   padding: 30px 20px;
 }
