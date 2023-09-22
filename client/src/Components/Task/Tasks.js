@@ -4,7 +4,7 @@ import './Tasks.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { getAllTodo } from '../../Redux/Actions/api';
 import Todo from '../SingleTodo/Todo';
-import { ACTIVE_TODOS, ALL_TODOS, DONE_TODOS } from '../../Redux/Actions/type';
+import { ACTIVE_TODOS, ALL_TODOS, DELETED_TODOS, DONE_TODOS } from '../../Redux/Actions/type';
 import FilterComponent from '../Filter/FilterComponent';
 
 function Task() {
@@ -25,6 +25,9 @@ function Task() {
     } else if (currentFilter === DONE_TODOS) {
       return storedTodos.filter(task => task.status);
     }
+    // else if(currentFilter === DELETED_TODOS){
+    //   return storedTodos.filter(task => task.deleted)
+    // }
   };
 
   return (

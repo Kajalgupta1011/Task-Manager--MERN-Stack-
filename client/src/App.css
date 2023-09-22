@@ -75,6 +75,10 @@ h2 {
   padding: 0;
   
 }
+.filter_sidebar ul{
+  display: flex;
+  flex-wrap: wrap;
+}
 .task-container ul {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -175,10 +179,16 @@ input.input_task:focus {
   max-width: 40px;
 }
 .filter_sidebar ul li{
+  padding-right: 30px;
   display: flex;
   align-items: center;
   gap: 10px;
 }
+/* .deleted_todo{
+  background-color: rgba(0, 0, 0, 0.377);
+} */
+
+
 /* media query css------------------------------------------------------------------ */
 @media (min-width: 1220px){
   .task-container ul {

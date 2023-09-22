@@ -31,10 +31,11 @@ function Todo({ task }) {
     const handleEditSubmit = (e) => {
         e.preventDefault();
         setEditing(!editing);
-        dispatch(updateTask(task._id, text));
+        dispatch(updateTask(task._id, text, false));
     }
 
     const handleDelete = (e) => {
+        // dispatch(updateTask(task._id, text, true));
         dispatch(deleteTask(task._id));
     }
 

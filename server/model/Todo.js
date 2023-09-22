@@ -12,6 +12,10 @@ const todoSchema = new mongoose.Schema({
     timestamp:{
         type: Date,
         default: Date.now()
+    },
+    deleted: {
+        type:Boolean,
+        default:false
     }
 })
 
