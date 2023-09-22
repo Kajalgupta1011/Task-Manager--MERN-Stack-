@@ -3,9 +3,11 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import thunk from 'redux-thunk';
 
 import { todosReducers } from './Reducers/todosReducers';
+import { filterReducers } from './Reducers/filterReducers';
 
 const reducer = combineReducers({
-  todos: todosReducers
+  todos: todosReducers,
+  currentFilter: filterReducers
 });
 
 const middleware = [thunk];

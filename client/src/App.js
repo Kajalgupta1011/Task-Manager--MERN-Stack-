@@ -13,7 +13,7 @@ function App() {
           <Search />
         </div>
         <div className='main-section'>
-          <FilterComponent/>
+          {/* <FilterComponent/> */}
           <Task />
         </div>
       </div>
