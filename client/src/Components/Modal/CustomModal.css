@@ -1,0 +1,42 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure the modal is above everything */
+}
+.modal-overlay h2 {
+  margin: 0;
+}
+
+.modal-overlay button {
+  padding: 9px 27px;
+  border: navajowhite;
+  margin-right: 25px;
+  background: #80808069;
+  border-radius: 8px;
+}
+/* Modal content style */
+.custom-modal {
+  position: relative;
+  max-width: 600px; /* Adjust the modal width as needed */
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  z-index: 1001; /* Ensure the modal is above the overlay */
+}
+
+/* Modal content style */
+.modal-content {
+  text-align: center;
+}
+
+/* Prevent body from scrolling when modal is open */
+body.modal-open {
+  overflow: hidden;
+}
