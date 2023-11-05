@@ -5,7 +5,13 @@ import cors from 'cors';
 import Routes from './Routes/route.js';
 
 const app = express();
-app.use(cors())
+app.use(cors(
+    {
+        origin: ['https://task-manager-mern-stack-six.vercel.app/'],
+        methods: ["POST", "GET"],
+        credentialS: true
+    }
+))
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }))

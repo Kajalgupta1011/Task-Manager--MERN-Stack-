@@ -2,7 +2,8 @@ import axios from 'axios';
 import { ADD_NEW_TODO, GET_ALL_TODO, TODO_TOGGLE, UPDATE_TODO, DELETE_TODO, FILTER_TOGGLE } from './type';
 
 
-const API_URL = 'http://localhost:8000';
+// const API_URL = 'http://localhost:8000';
+const API_URL = 'https://task-manager-mern-stack-six.vercel.app/';
 
 export const addNewTodo = (data) => async (dispatch) => {
     try {
