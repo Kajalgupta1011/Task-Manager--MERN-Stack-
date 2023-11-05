@@ -7,7 +7,7 @@ import Routes from './Routes/route.js';
 const app = express();
 app.use(cors(
     {
-        origin: [""],
+        origin: ["https://task-manager-mern-stack-frontend.vercel.app"],
         methods: ["POST", "GET"],
         credentialS: true
     }
